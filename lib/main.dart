@@ -18,7 +18,10 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Despesas Pessoais')),
+      appBar: AppBar(
+        title: Text('Despesas Pessoais'),
+        backgroundColor: Colors.blue,
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -29,7 +32,7 @@ class MyHomePage extends StatelessWidget {
               child: Text('Gráfico'),
             ),
           ),
-          TransactionUser()
+          TransactionUser(),
         ],
       ),
     );
