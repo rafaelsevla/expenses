@@ -21,7 +21,10 @@ class TransactionList extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                   decoration: BoxDecoration(
-                    border: Border.all(color: Colors.purple[50]!, width: 2),
+                    border: Border.all(
+                      color: Theme.of(context).colorScheme.primary,
+                      width: 2,
+                    ),
                     borderRadius: BorderRadius.circular(5),
                   ),
                   padding: EdgeInsets.all(10),
@@ -30,7 +33,7 @@ class TransactionList extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: Colors.purple,
+                        color: Theme.of(context).colorScheme.primary,
                     ),
                   ),
                 ),
@@ -39,10 +42,12 @@ class TransactionList extends StatelessWidget {
                   children: [
                     Text(
                       tr.title,
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: Theme.of(context).textTheme.titleLarge
+                      // style: TextStyle(
+                      //   fontSize: 16,
+                      //   fontWeight: FontWeight.bold,
+
+                      // ),
                     ),
                     Text(
                       DateFormat('d MMM y').format(tr.date),
