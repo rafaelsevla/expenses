@@ -22,18 +22,20 @@ class MyHomePage extends StatelessWidget {
         title: Text('Despesas Pessoais'),
         backgroundColor: Colors.blue,
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          SizedBox(
-            child: Card(
-              elevation: 5,
-              color: Colors.blue,
-              child: Text('Gráfico'),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            SizedBox(
+              child: Card(
+                elevation: 5,
+                color: Colors.blue,
+                child: Text('Gráfico'),
+              ),
             ),
-          ),
-          TransactionUser(),
-        ],
+            TransactionUser(),
+          ],
+        ),
       ),
     );
   }
