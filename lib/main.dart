@@ -48,7 +48,6 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Despesas Pessoais')),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           SizedBox(
@@ -102,6 +101,25 @@ class MyHomePage extends StatelessWidget {
                 ),
               );
             }).toList(),
+          ),
+          Card(
+            elevation: 5,
+            child: Padding(
+              padding: const EdgeInsets.all(10),
+              child: Column(
+                children: [
+                  TextField(decoration: InputDecoration(labelText: 'Título')),
+                  TextField(
+                    decoration: InputDecoration(labelText: 'Valor (R\$)'),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    style: TextButton.styleFrom(foregroundColor: Colors.purple),
+                    child: Text('Nova Transação'),
+                  ),
+                ],
+              ),
+            ),
           ),
         ],
       ),
